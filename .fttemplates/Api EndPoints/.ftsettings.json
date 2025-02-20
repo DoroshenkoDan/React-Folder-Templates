@@ -1,0 +1,7 @@
+{
+	"name": "Api EndPoints",
+	"omitParentDirectory": true,
+	"omitFTName": false,
+	"customVariables": ["FTName=>ApiEndPoints"]
+}
+

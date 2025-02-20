@@ -1,0 +1,6 @@
+{
+	"name": "Function",
+	"omitParentDirectory": true,
+	"omitFTName": false,
+	"customVariables": ["FTName=>Function"]
+}

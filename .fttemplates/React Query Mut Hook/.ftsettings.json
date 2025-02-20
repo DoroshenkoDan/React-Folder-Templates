@@ -1,0 +1,6 @@
+{
+	"name": "React Query Mut Hook",
+	"omitParentDirectory": true,
+	"omitFTName": false,
+	"customVariables": ["FTName=>QueryMutHook"]
+}

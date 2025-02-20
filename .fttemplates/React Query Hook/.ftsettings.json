@@ -1,0 +1,6 @@
+{
+	"name": "React Query Hook",
+	"omitParentDirectory": true,
+	"omitFTName": false,
+	"customVariables": ["FTName=>QueryHook"]
+}

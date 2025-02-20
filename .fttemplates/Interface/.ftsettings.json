@@ -1,0 +1,6 @@
+{
+	"name": "Interface",
+	"omitParentDirectory": true,
+	"omitFTName": false,
+	"customVariables": ["FTName=>Interface"]
+}
