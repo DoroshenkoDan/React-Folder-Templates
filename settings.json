@@ -1,0 +1,460 @@
+{"folderTemplates.structures": [
+		{
+			"name": "Component Template",
+			"structure": [
+				{
+					"fileName": "index.ts",
+					"template": "IndexFile"
+				},
+				{
+					"fileName": "<FTName>.tsx",
+					"template": "ComponentFile"
+				},
+				{
+					"fileName": "<FTName>.module.scss",
+					"template": "ComponentScssFile"
+				}
+			]
+		},
+		{
+			"name": "Page Template",
+			"structure": [
+				{
+					"fileName": "index.ts",
+					"template": "IndexFile"
+				},
+				{
+					"fileName": "<FTName>.tsx",
+					"template": "PageComponentFile"
+				},
+				{
+					"fileName": "<FTName>.module.scss",
+					"template": "PageScssFile"
+				}
+			]
+		},
+		{
+			"name": "Section Template",
+			"structure": [
+				{
+					"fileName": "index.ts",
+					"template": "IndexFile"
+				},
+				{
+					"fileName": "<FTName>.tsx",
+					"template": "SectionFile"
+				},
+				{
+					"fileName": "<FTName>.module.scss",
+					"template": "SectionScssFile"
+				}
+			]
+		},
+		{
+			"name": "UI Component Template",
+			"structure": [
+				{
+					"fileName": "index.ts",
+					"template": "IndexFile"
+				},
+				{
+					"fileName": "<FTName>.tsx",
+					"template": "UiComponentFile"
+				},
+				{
+					"fileName": "<FTName>.module.scss",
+					"template": "UiComponentScssFile"
+				}
+			]
+		},
+		{
+			"name": "Manager Template",
+			"structure": [
+				{
+					"fileName": "index.ts",
+					"template": "ManagerIndexFile"
+				},
+				{
+					"fileName": "types.ts",
+					"template": "ManagerTypesFile"
+				},
+				{
+					"fileName": "useInitialState.ts",
+					"template": "ManagerUseInitialStateFile"
+				},
+				{
+					"fileName": "<FTName>.tsx",
+					"template": "ManagerComponentFile"
+				}
+			]
+		},
+		{
+			"name": "Function Template",
+			"omitParentDirectory": true,
+			"structure": [
+				{
+					"fileName": "<FTName>.ts",
+					"template": "FunctionFile"
+				}
+			]
+		},
+		{
+			"name": "Inteface Template",
+			"omitParentDirectory": true,
+			"structure": [
+				{
+					"fileName": "<FTName>.ts",
+					"template": "IntefaceFile"
+				}
+			]
+		},
+		{
+			"name": "Api Endpoints Template",
+			"omitParentDirectory": true,
+			"structure": [
+				{
+					"fileName": "<FTName>.ts",
+					"template": "ApiEndpointsFile"
+				}
+			]
+		},
+		{
+			"name": "React Query Hook Template",
+			"omitParentDirectory": true,
+			"structure": [
+				{
+					"fileName": "<FTName>.ts",
+					"template": "ReactQueryHookFile"
+				}
+			]
+		},
+		{
+			"name": "React Query Mut Hook Template",
+			"omitParentDirectory": true,
+			"structure": [
+				{
+					"fileName": "<FTName>.ts",
+					"template": "ReactQueryMutHookFile"
+				}
+			]
+		},
+	],
+	"folderTemplates.fileTemplates": {
+		"IndexFile": "export { default } from './<FTName>';\n",
+		"ComponentFile": [
+			"import React from 'react';",
+			"import cn from 'classnames';",
+			"import s from './<FTName>.module.scss';",
+			"",
+			"interface Props {",
+			"  className?: string;",
+			"}",
+			"",
+			"/**",
+			" *  <FTName>",
+			" *  @param className",
+			" */",
+			"",
+			"export default function <FTName>({ className = '' }: Props) {",
+			"  return (",
+			"    <div className={cn(s.<FTName>, className)}> ",
+			"    </div>",
+			"  );",
+			"}"
+		],
+		"ComponentScssFile": [
+			"@use 'react-responsive-tools' as *;",
+			"",
+			"@layer components {",
+			"  .<FTName> {",
+			"    ",
+			"  }",
+			"}"
+		],
+		"PageComponentFile": [
+			"import s from './<FTName>.module.scss';",
+			"",
+			"export default function <FTName>() {",
+			"  return (",
+			"      <main className={s.<FTName]}>",
+			"      </main>",
+			"  );",
+			"}"
+		],
+		"PageScssFile": [
+			"@use 'react-responsive-tools' as *;",
+			"",
+			"@layer page {",
+			"  .<FTName> {",
+			"    ",
+			"  }",
+			"}"
+		],
+		"SectionFile": [
+			"import s from './[FTName].module.scss';",
+			"",
+			"export default function [FTName]() {",
+			"  return <section className={s.[FTName]}></section>;",
+			"}"
+		],
+		"SectionScssFile": [
+			"@use 'react-responsive-tools' as *;",
+			"",
+			"@layer section {",
+			"  .[FTName] {",
+			"    ",
+			"  }",
+			"}"
+		],
+		"UiComponentFile": [
+			"import cn from 'classnames';",
+			"import s from './[FTName].module.scss';",
+			"",
+			"interface T[FTName]Props ",
+			"extends React.DetailedHTMLProps<",
+			"React.HTMLAttributes<HTMLDivElement>,",
+			"HTMLDivElement",
+			">{",
+			"className?: string;",
+			"}",
+			"",
+			"/**",
+			" *  [FTName]",
+			" *  @param className",
+			" */",
+			"",
+			"export default function [FTName]({ className = '', children }: T[FTName]Props) {",
+			"return(",
+			"<div className={cn(s.[FTName], className)}>",
+			"{children}",
+			"</div>",
+			")",
+			"}"
+		],
+		"UiComponentScssFile": [
+			"@use 'react-responsive-tools' as *;",
+			"",
+			"@layer ui {",
+			"  .[FTName] {",
+			"    ",
+			"  }",
+			"}"
+		],
+		"ManagerIndexFile": [
+			"import <FTName>, {",
+			"  use<FTName>,",
+			"  with<FTName>,",
+			"} from './<FTName>';",
+			"",
+			"export { <FTName>, use<FTName>, with<FTName> };"
+		],
+		"ManagerTypesFile": [
+			"export interface T<FTName>St {",
+			"  // Add your state types here",
+			"}"
+		],
+		"ManagerUseInitialStateFile": [
+			"export default function useInitialState() {",
+			"  // Add your state logic here",
+			"  return {",
+			"    // Return your state here",
+			"  };",
+			"}"
+		],
+		"ManagerComponentFile": [
+			"import React, { createContext, PropsWithChildren, useContext } from 'react';",
+			"",
+			"import { T<FTName>St } from './types';",
+			"import useInitialState from './useInitialState';",
+			"",
+			"interface T<FTName>PrvdProps {",
+			"  children: React.ReactNode;",
+			"}",
+			"",
+			"export const <FTName>Ctx = createContext<T<FTName>St>({",
+			"  // Add initial state here",
+			"});",
+			"",
+			"export const use<FTName> = () => useContext(<FTName>Ctx);",
+			"",
+			"export default function <FTName>({ children }: T<FTName>PrvdProps) {",
+			"  const value = useInitialState();",
+			"",
+			"  return (",
+			"    <<FTName>Ctx.Provider value={value}>",
+			"      {children}",
+			"    </<FTName>Ctx.Provider>",
+			"  );",
+			"}",
+			"",
+			"export function with<FTName><P>(",
+			"  Component: React.ComponentType<PropsWithChildren<P>>",
+			") {",
+			"  return (props: PropsWithChildren<P>) => {",
+			"    return (",
+			"      <<FTName>>",
+			"        <Component {...props} />",
+			"      </<FTName>>",
+			"    );",
+			"  };",
+			"}"
+		],
+		"FunctionFile": [
+			"/**",
+			" * <FTName>",
+			" * @description Function description",
+			" * @param params - Parameters description",
+			" * @returns Return value description",
+			" */",
+			"export const <FTName> = () => {",
+			"  return;",
+			"};"
+		],
+		"IntefaceFile": [
+			"/**",
+			"* [FTName] interface",
+			"* @description Interface description",
+			"*/",
+			"",
+			"export interface <FTName> {",
+			"  // Add your interface properties here",
+			"}"
+		],
+		"ApiEndpointsFile": [
+			"import { AxiosRequestConfig } from 'axios';",
+			"import BaseRESTClient from '../../../BaseRESTClient';",
+			"import { TResponseError } from '../../types';",
+			"",
+			"/**",
+			" * @function [FTName]",
+			" * @alias [FTName]",
+			" * @see https://github.com/axios/axios",
+			" */",
+			"",
+			"export interface TAPI[FTName] {",
+			"  TError: TResponseError;",
+			"  TSuccess: {",
+			"    data: object;",
+			"  };",
+			"  TParams: {",
+			"    examId: string;",
+			"  };",
+			"}",
+			"",
+			"export type TError = TAPI[FTName]['TError'];",
+			"export type TSuccess = TAPI[FTName]['TSuccess'];",
+			"export type TParams = TAPI[FTName]['TParams'];",
+			"",
+			"export async function [FTName](",
+			"  this: BaseRESTClient,",
+			"  params: TParams,",
+			"  config?: AxiosRequestConfig",
+			"): Promise<TSuccess> {",
+			"  try {",
+			"    const { data } = await this.client.get<TSuccess>(",
+			"      `/examination/optic-disk-analyse/${params.examId}`,",
+			"      config",
+			"    );",
+			"    return data;",
+			"  } catch (error: any | TError) {",
+			"    if (error.data.status === 'Error') throw error.data;",
+			"    else",
+			"      throw {",
+			"        message: error?.message,",
+			"        status: error?.response.status,",
+			"      };",
+			"  }",
+			"}"
+		],
+		"ReactQueryHookFile": [
+			"import { DefinedInitialDataOptions,",
+			"  UndefinedInitialDataOptions,",
+			"  useQuery,",
+			"  UseQueryResult,",
+			"} from '@tanstack/react-query';",
+			"",
+			"import { api } from '_api';",
+			"import { TSuccess, TParams } from '_api/AltrisRESTClient/routes/[FTName]';",
+			"",
+			"export type T[FTName]Query = UseQueryResult<TSuccess>;",
+			"",
+			"export type T[FTName]Opts = Omit<",
+			"  DefinedInitialDataOptions<TSuccess>,",
+			"  'queryKey' | 'initialData'",
+			">;",
+			"",
+			"export const get[FTName]Key = (params: TParams) => [",
+			"  '[FTName]',",
+			"  params,",
+			"];",
+			"",
+			"export default function use[FTName]Query(",
+			"  params: TParams,",
+			"  options?: T[FTName]Opts",
+			") {",
+			"  const opts = get[FTName]Opts(params, options);",
+			"  return useQuery<TSuccess>(opts);",
+			"}",
+			"",
+			"export function get[FTName]Opts(",
+			"  params: TParams,",
+			"  options?: T[FTName]Opts",
+			"): UndefinedInitialDataOptions<TSuccess> {",
+			"  return {",
+			"    ...options,",
+			"    queryKey: get[FTName]Key(params),",
+			"    queryFn: ({ signal }) => api.[FTName](params, { signal }),",
+			"    enabled: Boolean(options?.enabled ?? params.examId),",
+			"  };",
+			"}"
+		],
+		"ReactQueryMutHookFile": [
+			"import { useMutation,",
+			"  MutationOptions,",
+			"  UseMutationResult,",
+			"} from '@tanstack/react-query';",
+			"",
+			"import { api } from '_api';",
+			"import { TSuccess, TPayload, TError } from '_api/AltrisRESTClient/routes/[FTName]';",
+			"",
+			"type TParams = {",
+			"  examId: string;",
+			"};",
+			"",
+			"export type T[FTName]Mut = UseMutationResult<",
+			"  TSuccess,",
+			"  TError,",
+			"  TPayload,",
+			"  unknown",
+			">;",
+			"",
+			"export type T[FTName]MutOpt = Omit<",
+			"  MutationOptions<TSuccess, TError, TPayload>,",
+			"  'mutationKey'",
+			">;",
+			"",
+			"export const get[FTName]MutKey = (params: TParams) => [",
+			"  '[FTName]',",
+			"  params,",
+			"];",
+			"",
+			"export function get[FTName]MutOpts(",
+			"  params: TParams,",
+			"  options?: T[FTName]MutOpt",
+			") {",
+			"  return {",
+			"    ...options,",
+			"    mutationKey: get[FTName]MutKey(params),",
+			"    mutationFn: (variables: TPayload) => api.[FTName](variables),",
+			"  };",
+			"}",
+			"",
+			"export default function use[FTName]Mut(",
+			"  params: TParams,",
+			"  options?: T[FTName]MutOpt",
+			") {",
+			"  const opts = get[FTName]MutOpts(params, options);",
+			"  return useMutation<TSuccess, TError, TPayload>(opts);",
+			"}"
+		]
+	}}
